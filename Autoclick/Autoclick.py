@@ -2,7 +2,13 @@ import pyautogui
 import time
 import keyboard
 
+
 cps = int(input("Combien de clics par seconde voulez-vous effectuer ?  7 max"))
+print("appuyez sur H pour démarer les clics")
+print("appuyez sur Y pour mettre en pause")
+print("appuyez sur U pour mettre reprendre")
+print("appuyez sur I pour fermer le programme")
+
 
 clics_en_cours = False
 
@@ -22,6 +28,7 @@ while True:
             print("Programme en pause")
         else:
             print("Clics non en cours")
+            time.sleep(1)
     elif keyboard.is_pressed('u'):
         if not clics_en_cours:
             clics_en_cours = True
